@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copperline Plumbing Co. — 24/7 Emergency Plumber in Grand Rapids, MI</title>
+<meta name="description" content="Copperline Plumbing Co. is a licensed master plumber in Grand Rapids, MI. 24/7 emergency service, flat-rate pricing, drain cleaning, water heaters, leak detection, and sewer repair across Kent County.">
+<meta name="theme-color" content="#0a2540">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   1. TOKENS
+   ============================================================ */
+:root{
+  --navy:#0a2540;
+  --navy-2:#0d3054;
+  --blue:#0f6fd1;
+  --blue-dark:#0b5299;
+  --blue-soft:#e8f1fb;
+  --red:#d92b3f;
+  --red-dark:#b81f31;
+  --paper:#f3f7fb;
+  --white:#ffffff;
+  --muted:#5a6c7f;
+  --line:#dde6ef;
+  --radius:16px;
+  --shadow:0 8px 28px rgba(10,37,64,.08);
+  --shadow-lg:0 24px 64px rgba(10,37,64,.16);
+  --container:1160px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color:var(--navy);
+  background:var(--paper);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+
+h1,h2,h3,h4{
+  font-family:'Sora','Inter',sans-serif;
+  font-weight:800;
+  letter-spacing:-.02em;
+  line-height:1.1;
+  margin:0;
+  color:var(--navy);
+}
+
+.container{width:min(100% - 40px, var(--container));margin-inline:auto}
+section{scroll-margin-top:110px}
+
+/* ============================================================
+   2. SHARED BITS
+   ============================================================ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--blue-dark);
+  background:var(--blue-soft);
+  border:1px solid #cfe3f7;
+  padding:7px 14px;border-radius:999px;
+  margin:0 0 18px;
+}
+.section-head{max-width:660px;margin-bottom:46px}
+.section-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:14px}
+.section-sub{color:var(--muted);margin:0;font-size:1.02rem}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:15px 28px;border-radius:12px;
+  font-weight:600;font-size:.95rem;
+  border:2px solid transparent;cursor:pointer;
+  transition:background .22s,border-color .22s,transform .22s,box-shadow .22s,color .22s;
+}
+.btn:focus-visible{outline:3px solid rgba(15,111,209,.45);outline-offset:3px}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(15,111,209,.28)}
+.btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px)}
+.btn-call{background:var(--red);color:#fff;box-shadow:0 12px 28px rgba(217,43,63,.32)}
+.btn-call:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--navy);border-color:#c6d5e4}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue-dark);background:#fff}
+.btn-block{width:100%}
+.btn svg{flex:none}
+
+/* ============================================================
+   3. EMERGENCY BAR
+   ============================================================ */
+.emergency-bar{
+  background:linear-gradient(90deg,var(--red-dark),var(--red));
+  color:#fff;font-size:.85rem;font-weight:600;
+}
+.emergency-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:14px;padding:10px 0;flex-wrap:wrap;
+}
+.emergency-left{display:flex;align-items:center;gap:10px;letter-spacing:.01em}
+.pulse{
+  width:9px;height:9px;border-radius:50%;background:#fff;flex:none;
+  box-shadow:0 0 0 0 rgba(255,255,255,.7);
+  animation:pulse 2.2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,255,255,.65)}
+  70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+.emergency-bar a{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#fff;text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1.5px;
+}
+.emergency-bar a:hover{color:#ffe3e6}
+
+/* ============================================================
+   4. HEADER
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s;
+}
+.site-header.scrolled{box-shadow:0 8px 26px rgba(10,37,64,.1)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:13px 0}
+
+.logo{display:flex;align-items:center;gap:11px}
+.logo-mark{
+  width:44px;height:44px;border-radius:12px;flex:none;
+  background:linear-gradient(150deg,var(--blue),var(--navy));
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 6px 16px rgba(15,111,209,.3);
+}
+.logo-text{
+  font-family:'Sora',sans-serif;font-weight:800;
+  font-size:1.18rem;line-height:1.05;letter-spacing:-.02em;
+  display:flex;flex-direction:column;
+}
+.logo-text small{
+  font-family:'Inter',sans-serif;font-weight:600;
+  font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--blue-dark);margin-top:4px;
+}
+
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{font-size:.92rem;font-weight:500;color:#33465a;transition:color .2s}
+.nav a:hover{color:var(--blue-dark)}
+.nav .nav-phone{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;color:var(--navy);font-size:.95rem;
+}
+.nav .nav-phone:hover{color:var(--blue-dark)}
+.nav .btn{padding:12px 20px;font-size:.88rem;border-radius:10px}
+
+.menu-toggle{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:44px;height:44px;padding:0 10px;
+  background:#fff;border:1px solid var(--line);border-radius:10px;cursor:pointer;
+}
+.menu-toggle span{display:block;height:2px;background:var(--navy);border-radius:2px;transition:transform .25s,opacity .2s}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============================================================
+   5. HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  padding:74px 0 86px;
+  background:
+    radial-gradient(680px 420px at 88% 4%,#dceafb 0%,rgba(220,234,251,0) 70%),
+    radial-gradient(520px 380px at 6% 96%,#e3f0fe 0%,rgba(227,240,254,0) 70%),
+    #fbfdff;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(10,37,64,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(10,37,64,.045) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(circle at 30% 20%,#000,transparent 78%);
+          mask-image:radial-gradient(circle at 30% 20%,#000,transparent 78%);
+}
+.hero-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1.06fr .94fr;gap:56px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.25rem,5.4vw,3.85rem);
+  margin-bottom:20px;
+}
+.hero h1 .hl{color:var(--blue);position:relative;white-space:nowrap}
+.hero h1 .hl::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;
+  background:rgba(217,43,63,.22);border-radius:4px;z-index:-1;
+}
+.hero .lead{
+  font-size:1.06rem;color:#42576b;max-width:520px;margin:0 0 30px;
+}
+.hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:28px}
+.hero-cta .btn{padding:16px 26px}
+.hero-meta{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;gap:10px 22px;
+  font-size:.88rem;color:#42576b;font-weight:500;
+}
+.hero-meta li{display:flex;align-items:center;gap:8px}
+.hero-meta svg{color:var(--blue);flex:none}
+
+/* hero visual */
+.hero-media{position:relative}
+.hero-media .photo{
+  position:relative;overflow:hidden;border-radius:22px;
+  aspect-ratio:5/5.4;
+  background:linear-gradient(150deg,#123a5f,#0a2540);
+  box-shadow:var(--shadow-lg);
+}
+.hero-media .photo img{
+  width:100%;height:100%;object-fit:cover;
+  filter:grayscale(1) contrast(1.06);
+}
+.hero-media .photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(155deg,rgba(15,111,209,.78),rgba(10,37,64,.9));
+  mix-blend-mode:multiply;
+}
+.float{
+  position:absolute;z-index:2;
+  background:#fff;border-radius:14px;
+  box-shadow:0 18px 44px rgba(10,37,64,.18);
+  padding:14px 18px;
+}
+.float-top{top:-16px;left:-14px;display:flex;align-items:center;gap:11px}
+.float-top .pulse{background:var(--red);animation:pulse-red 2.2s infinite}
+@keyframes pulse-red{
+  0%{box-shadow:0 0 0 0 rgba(217,43,63,.55)}
+  70%{box-shadow:0 0 0 10px rgba(217,43,63,0)}
+  100%{box-shadow:0 0 0 0 rgba(217,43,63,0)}
+}
+.float-top strong{display:block;font-size:.86rem;line-height:1.2}
+.float-top span{font-size:.74rem;color:var(--muted)}
+.float-bottom{
+  bottom:-18px;right:-10px;
+  display:flex;align-items:center;gap:12px;
+}
+.float-bottom .num{
+  font-family:'Sora',sans-serif;font-weight:800;font-size:1.5rem;line-height:1;
+}
+.float-bottom .stars{color:#f5a623;font-size:.8rem;letter-spacing:1px;line-height:1}
+.float-bottom small{display:block;font-size:.72rem;color:var(--muted);margin-top:3px}
+
+/* ============================================================
+   6. TRUST STRIP
+   ============================================================ */
+.trust{background:#fff;border-block:1px solid var(--line)}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:0;
+}
+.trust-item{
+  display:flex;align-items:flex-start;gap:13px;
+  padding:26px 24px;
+  border-left:1px solid var(--line);
+}
+.trust-item:first-child{border-left:0}
+.trust-item .ti{
+  width:40px;height:40px;flex:none;border-radius:11px;
+  background:var(--blue-soft);color:var(--blue-dark);
+  display:grid;place-items:center;
+}
+.trust-item strong{display:block;font-size:.94rem;font-weight:700;line-height:1.3}
+.trust-item span{font-size:.82rem;color:var(--muted)}
+
+/* ============================================================
+   7. SERVICES
+   ============================================================ */
+.services{padding:92px 0}
+.services-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:14px;
+}
+.svc{
+  display:flex;gap:16px;align-items:flex-start;
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 20px;
+  transition:border-color .25s,box-shadow .25s,transform .25s;
+}
+.svc:hover{border-color:#b9d5f2;box-shadow:var(--shadow);transform:translateY(-2px)}
+.svc-ico{
+  width:44px;height:44px;flex:none;border-radius:12px;
+  background:var(--blue-soft);color:var(--blue-dark);
+  display:grid;place-items:center;
+}
+.svc h3{font-size:1.03rem;margin-bottom:6px;font-weight:700;letter-spacing:-.01em}
+.svc p{margin:0 0 10px;font-size:.9rem;color:var(--muted);line-height:1.6}
+.svc-price{
+  display:inline-block;
+  font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--blue-dark);background:var(--blue-soft);
+  padding:4px 10px;border-radius:6px;
+}
+.services-foot{
+  margin-top:26px;padding:20px 24px;
+  background:#fff;border:1px dashed #c3d8ee;border-radius:14px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:.92rem;color:#42576b;
+}
+.services-foot strong{color:var(--navy)}
+
+/* ============================================================
+   8. EMERGENCY CTA BAND
+   ============================================================ */
+.cta-band{
+  position:relative;overflow:hidden;
+  background:linear-gradient(105deg,var(--red-dark) 0%,var(--red) 60%,#e14a5c 100%);
+  color:#fff;
+  padding:52px 0;
+}
+.cta-band::after{
+  content:"";position:absolute;right:-80px;top:-90px;
+  width:360px;height:360px;border-radius:50%;
+  background:rgba(255,255,255,.09);
+}
+.cta-inner{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+}
+.cta-band h2{
+  color:#fff;font-size:clamp(1.5rem,3.2vw,2.1rem);margin-bottom:8px;
+}
+.cta-band p{margin:0;color:#ffe0e4;font-size:.98rem;max-width:520px}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--red-dark);border-color:#fff}
+.btn-white:hover{background:#fff5f6;transform:translateY(-2px)}
+.btn-clear{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-clear:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.cta-actions .btn{padding:16px 26px;font-size:1rem}
+.cta-actions .phone{font-size:1.06rem;font-weight:700}
+
+/* ============================================================
+   9. HOW IT WORKS
+   ============================================================ */
+.steps{padding:88px 0;background:#fff;border-bottom:1px solid var(--line)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step{position:relative;padding:26px 24px 24px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
+.step .n{
+  font-family:'Sora',sans-serif;font-weight:800;font-size:.8rem;
+  letter-spacing:.14em;color:var(--blue-dark);
+  background:#fff;border:1px solid #cfe3f7;border-radius:8px;
+  display:inline-block;padding:4px 9px;margin-bottom:14px;
+}
+.step h3{font-size:1.08rem;margin-bottom:8px}
+.step p{margin:0;font-size:.92rem;color:var(--muted)}
+
+/* ============================================================
+   10. SERVICE AREAS
+   ============================================================ */
+.areas{padding:92px 0}
+.areas-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.area-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:26px 24px;
+  transition:box-shadow .25s,transform .25s,border-color .25s;
+}
+.area-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#b9d5f2}
+.area-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+.area-head h3{font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+.zone{
+  font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 9px;border-radius:6px;white-space:nowrap;
+}
+.zone-1{background:#e6f6ec;color:#15803d}
+.zone-2{background:var(--blue-soft);color:var(--blue-dark)}
+.zone-3{background:#fdf0e3;color:#a3560f}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.chips li{
+  font-size:.82rem;color:#42576b;background:var(--paper);
+  border:1px solid var(--line);border-radius:999px;
+  padding:5px 12px;
+}
+.area-note{
+  margin-top:22px;padding:20px 24px;border-radius:14px;
+  background:var(--navy);color:#c7d6e4;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  font-size:.94rem;
+}
+.area-note a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.area-note a:hover{color:#9fc7f0}
+
+/* ============================================================
+   11. TESTIMONIALS
+   ============================================================ */
+.reviews{padding:92px 0;background:linear-gradient(180deg,#eef5fd,#f7fbff);border-block:1px solid var(--line)}
+.reviews-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+
+.slider{position:relative;max-width:880px}
+.stage{position:relative;min-height:270px}
+.tslide{display:none}
+.tslide.active{display:block;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.quote-card{
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:38px 38px 32px;box-shadow:var(--shadow);
+  position:relative;
+}
+.quote-card::before{
+  content:"\201C";
+  position:absolute;top:6px;right:30px;
+  font-family:Georgia,serif;font-size:7rem;line-height:1;
+  color:#dbeafb;
+}
+.quote-card .stars{color:#f5a623;letter-spacing:2px;font-size:.95rem;margin-bottom:16px}
+.quote-card blockquote{
+  margin:0 0 24px;font-size:1.06rem;line-height:1.75;color:#2c4257;
+}
+.who{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+.avatar{
+  width:46px;height:46px;border-radius:50%;flex:none;
+  background:linear-gradient(140deg,var(--blue),var(--navy));
+  display:grid;place-items:center;color:#fff;
+  font-family:'Sora',sans-serif;font-weight:700;font-size:.9rem;
+}
+.who strong{display:block;font-size:.94rem;line-height:1.2}
+.who span{font-size:.82rem;color:var(--muted)}
+.platform{
+  margin-left:auto;
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--blue-dark);background:var(--blue-soft);
+  padding:5px 11px;border-radius:999px;white-space:nowrap;
+}
+
+.slider-controls{display:flex;align-items:center;gap:12px;margin-top:22px}
+.arrow{
+  width:44px;height:44px;border-radius:50%;
+  background:#fff;border:1px solid #c6d5e4;color:var(--navy);
+  display:grid;place-items:center;cursor:pointer;
+  transition:background .2s,border-color .2s,color .2s,transform .2s;
+}
+.arrow:hover{background:var(--navy);border-color:var(--navy);color:#fff;transform:translateY(-1px)}
+.arrow:focus-visible{outline:3px solid rgba(15,111,209,.45);outline-offset:3px}
+.dots{display:flex;gap:8px;margin-left:6px}
+.dot-btn{
+  width:9px;height:9px;padding:0;border-radius:50%;
+  border:0;background:#bcd2e6;cursor:pointer;transition:background .2s,transform .2s;
+}
+.dot-btn.active{background:var(--blue);transform:scale(1.25)}
+.dot-btn:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* ============================================================
+   12. BOOKING
+   ============================================================ */
+.book{padding:92px 0}
+.book-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start}
+.book-aside h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:16px}
+.book-aside > p{color:#42576b;margin:0 0 28px}
+
+.call-card{
+  background:var(--navy);color:#fff;border-radius:16px;
+  padding:26px 24px;margin-bottom:18px;
+}
+.call-card small{
+  display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#8fb4d8;margin-bottom:6px;font-weight:700;
+}
+.call-card a{
+  font-family:'Sora',sans-serif;font-weight:800;font-size:1.6rem;
+  color:#fff;letter-spacing:-.01em;
+}
+.call-card a:hover{color:#9fc7f0}
+.call-card p{margin:8px 0 0;font-size:.85rem;color:#a9c3da}
+
+.hours-list{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px;font-size:.9rem}
+.hours-list li{display:flex;justify-content:space-between;gap:14px;border-bottom:1px dashed var(--line);padding-bottom:9px}
+.hours-list li:last-child{border-bottom:0}
+.hours-list strong{font-weight:600}
+.hours-list .open{color:#15803d;font-weight:700}
+
+.form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px;box-shadow:var(--shadow)}
+.form-card h3{font-size:1.35rem;margin-bottom:6px}
+.form-note{color:var(--muted);font-size:.88rem;margin:0 0 24px}
+.req{color:var(--red)}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column}
+.field.full{grid-column:1 / -1}
+.field label{
+  font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:#33465a;margin-bottom:7px;
+}
+.field input,.field select,.field textarea{
+  font-family:inherit;font-size:.95rem;color:var(--navy);
+  padding:13px 14px;border:1px solid #d5e1ec;border-radius:10px;
+  background:#fbfdff;width:100%;
+  transition:border-color .2s,box-shadow .2s,background .2s;
+}
+.field textarea{resize:vertical;min-height:112px}
+.field select{
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235a6c7f' stroke-width='2.6'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--blue);background:#fff;
+  box-shadow:0 0 0 4px rgba(15,111,209,.14);
+}
+.field .err{display:none;color:#c0392b;font-size:.78rem;margin-top:6px}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#d9534f;background:#fdf5f6}
+.field.invalid .err{display:block}
+
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--muted)}
+.check input{width:17px;height:17px;flex:none;margin-top:2px;accent-color:var(--blue)}
+
+.form-success{display:none;text-align:center;padding:44px 18px}
+.form-success.show{display:block}
+.form-success .tick{
+  width:62px;height:62px;border-radius:50%;margin:0 auto 18px;
+  background:#e6f6ec;color:#15803d;display:grid;place-items:center;
+}
+.form-success h3{font-size:1.4rem;margin-bottom:8px}
+.form-success p{color:var(--muted);margin:0}
+.form-success a{color:var(--blue-dark);font-weight:600;text-decoration:underline}
+
+/* ============================================================
+   13. FOOTER
+   ============================================================ */
+.site-footer{background:var(--navy);color:#a9c0d6;font-size:.9rem;padding:62px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px}
+.site-footer .logo-text{color:#fff}
+.site-footer .logo-text small{color:#8fb4d8}
+.site-footer .logo-mark{background:linear-gradient(150deg,var(--blue),#0a2f52)}
+.footer-about p{margin:16px 0 0;max-width:300px;font-size:.88rem;line-height:1.75}
+.site-footer h4{
+  color:#fff;font-family:'Inter',sans-serif;font-weight:700;
+  font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;
+}
+.footer-links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer-links a:hover{color:#fff}
+.footer-contact{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.footer-contact li{display:flex;gap:10px;align-items:flex-start}
+.footer-contact svg{flex:none;margin-top:3px;color:var(--blue)}
+.footer-contact a:hover{color:#fff}
+.license-box{
+  margin-top:18px;padding:12px 14px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  font-size:.78rem;line-height:1.6;color:#9ab4cc;
+}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:.8rem;color:#7f9ab2;
+}
+.footer-bottom a:hover{color:#fff}
+
+/* ============================================================
+   14. REVEAL + RESPONSIVE
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-media{max-width:520px}
+  .services-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr;gap:16px}
+  .areas-grid{grid-template-columns:1fr}
+  .book-grid{grid-template-columns:1fr;gap:40px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:34px}
+  .trust-item{border-left:0;border-top:1px solid var(--line)}
+  .trust-item:first-child{border-top:0}
+}
+
+@media (max-width:880px){
+  .menu-toggle{display:flex}
+  .nav{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:2px;
+    background:#fff;border-top:1px solid var(--line);
+    padding:14px 20px 22px;box-shadow:var(--shadow-lg);
+    transform:translateY(-12px);opacity:0;pointer-events:none;
+    transition:opacity .25s,transform .25s;
+  }
+  .nav.open{transform:none;opacity:1;pointer-events:auto}
+  .nav a{padding:13px 4px;border-bottom:1px solid var(--line);font-size:1rem}
+  .nav .nav-phone{border-bottom:1px solid var(--line);padding:13px 4px;font-size:1rem}
+  .nav .btn{margin-top:14px;padding:15px 22px;font-size:.95rem}
+  .hero{padding:56px 0 66px}
+  .services,.areas,.reviews,.book{padding:68px 0}
+  .steps{padding:64px 0}
+}
+
+@media (max-width:620px){
+  .emergency-inner{justify-content:center;text-align:center;font-size:.8rem}
+  .hero-cta .btn{width:100%}
+  .hero-meta{gap:8px 16px;font-size:.84rem}
+  .form-grid{grid-template-columns:1fr}
+  .form-card{padding:24px 20px}
+  .quote-card{padding:28px 22px 24px}
+  .quote-card::before{font-size:5rem;right:16px}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .cta-actions{width:100%}
+  .cta-actions .btn{flex:1 1 100%}
+  .platform{margin-left:0}
+  .stage{min-height:340px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .pulse,.float-top .pulse{animation:none}
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== EMERGENCY BAR ==================== -->
+<div class="emergency-bar">
+  <div class="container emergency-inner">
+    <span class="emergency-left">
+      <span class="pulse" aria-hidden="true"></span>
+      24/7 Emergency Service &mdash; Live person, no answering machine
+    </span>
+    <span>
+      Burst pipe or no water? <a href="tel:+16165550119">Call (616) 555-0119</a>
+    </span>
+  </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header" id="header">
+  <div class="container nav-inner">
+    <a class="logo" href="#top" aria-label="Copperline Plumbing Co. home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.5s6 6.4 6 10.6a6 6 0 0 1-12 0C6 8.9 12 2.5 12 2.5z"/>
+        </svg>
+      </span>
+      <span class="logo-text">Copperline<small>Plumbing Co.</small></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#services">Services</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#reviews">Reviews</a>
+      <a class="nav-phone" href="tel:+16165550119">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (616) 555-0119
+      </a>
+      <a class="btn btn-primary" href="#book">Book a Plumber</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+
+    <div>
+      <p class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Grand Rapids &amp; Kent County
+      </p>
+
+      <h1>Burst pipe at 2&nbsp;a.m.?<br><span class="hl">We pick up.</span></h1>
+
+      <p class="lead">
+        Licensed master plumbers on call around the clock. We answer live, give you a
+        flat-rate price before we start, and show up with a stocked van &mdash; not an
+        estimate and a promise to call you back Tuesday.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-call" href="tel:+16165550119">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call (616) 555-0119
+        </a>
+        <a class="btn btn-outline" href="#book">Book a Visit</a>
+      </div>
+
+      <ul class="hero-meta">
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          No overtime charges, ever
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          Flat-rate pricing up front
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          2-year labor warranty
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-media reveal">
+      <div class="photo">
+        <img src="https://picsum.photos/seed/copperline-hero-van/900/980" alt="Copperline plumber working under a kitchen sink in Grand Rapids" loading="eager">
+      </div>
+
+      <div class="float float-top">
+        <span class="pulse" aria-hidden="true"></span>
+        <span>
+          <strong>Avg. response 47 min</strong>
+          <span>Emergencies, 24/7</span>
+        </span>
+      </div>
+
+      <div class="float float-bottom">
+        <div>
+          <div class="num">4.9</div>
+          <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <small>612 Google reviews</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== TRUST STRIP ==================== -->
+<div class="trust">
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <div class="ti">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 9.2 8 10 4.6-.8 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <div>
+        <strong>Michigan Master Plumber</strong>
+        <span>License #PL-21884 &middot; Insured</span>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <div class="ti">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      </div>
+      <div>
+        <strong>Live Answer, 24/7</strong>
+        <span>Real person, not a call center</span>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <div class="ti">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h4M6 14h8"/></svg>
+      </div>
+      <div>
+        <strong>Flat-Rate Pricing</strong>
+        <span>Price approved before work starts</span>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <div class="ti">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4L14.7 6.3Z"/></svg>
+      </div>
+      <div>
+        <strong>Stocked Vans</strong>
+        <span>Most repairs fixed same visit</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">What we fix</p>
+      <h2>Plumbing services</h2>
+      <p class="section-sub">
+        From a dripping faucet to a collapsed sewer line. Every job gets a flat price
+        in writing before we pick up a wrench &mdash; and we clean up like we were never there.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6 6.4 6 10.6a6 6 0 0 1-12 0C6 8.9 12 2.5 12 2.5z"/></svg>
+        </div>
+        <div>
+          <h3>Emergency Leak &amp; Burst Pipe Repair</h3>
+          <p>Water shut off, leak located, pipe repaired or replaced. We handle ceiling and wall access and dry-out coordination.</p>
+          <span class="svc-price">Call-out from $129</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>
+        </div>
+        <div>
+          <h3>Drain Cleaning &amp; Hydro Jetting</h3>
+          <p>Kitchen, bath, and main line clearing by cable or jetter. Camera inspection included on main lines so you know what's really going on.</p>
+          <span class="svc-price">From $189</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M9 8h6M9 12h6M12 16v2"/></svg>
+        </div>
+        <div>
+          <h3>Water Heater Repair &amp; Replacement</h3>
+          <p>Tank and tankless. Same-day swap on most 40&ndash;50 gallon units, haul-away included, permits pulled when required.</p>
+          <span class="svc-price">Install from $1,450</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.3-4.3"/></svg>
+        </div>
+        <div>
+          <h3>Leak Detection &amp; Repiping</h3>
+          <p>Acoustic and thermal leak location behind walls, under slabs, and in yards. Whole-home PEX repipes with drywall patch-back.</p>
+          <span class="svc-price">Detection from $225</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v6a4 4 0 0 0 4 4h8a4 4 0 0 1 4 4v2"/><circle cx="4" cy="4" r="1.6"/><circle cx="20" cy="20" r="1.6"/></svg>
+        </div>
+        <div>
+          <h3>Sewer Line Camera &amp; Repair</h3>
+          <p>Video inspection with a copy of the footage, spot repairs, and trenchless liner options for root intrusion and cracked clay tile.</p>
+          <span class="svc-price">Camera from $275</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M9 6h6"/><path d="M6 12h12v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/></svg>
+        </div>
+        <div>
+          <h3>Fixture &amp; Faucet Installation</h3>
+          <p>Toilets, sinks, disposals, shower valves, and outdoor spigots. Customer-supplied fixtures welcome &mdash; no upcharge for it.</p>
+          <span class="svc-price">From $145</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 7l7-5 7 5"/><path d="M3 22h18"/></svg>
+        </div>
+        <div>
+          <h3>Sump Pumps &amp; Frozen Pipe Prevention</h3>
+          <p>Primary and backup sump installs, heat trace, pipe insulation, and winterization for cottages and rental properties.</p>
+          <span class="svc-price">From $395</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ico">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <div>
+          <h3>Water &amp; Gas Line Service</h3>
+          <p>New water service lines, meter swaps, gas appliance hookups, and pressure testing for remodels and additions.</p>
+          <span class="svc-price">Quote on site</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="services-foot reveal">
+      <span>
+        <strong>Not sure what's wrong?</strong>
+        Describe it on the phone &mdash; we'll tell you what it probably is and what it typically costs.
+      </span>
+      <a class="btn btn-primary" href="tel:+16165550119">Talk to a plumber</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EMERGENCY CTA BAND ==================== -->
+<section class="cta-band" aria-labelledby="ctaHeading">
+  <div class="container cta-inner">
+    <div>
+      <h2 id="ctaHeading">Water where it shouldn't be?</h2>
+      <p>Shut off the main, then call us. We answer live 24 hours a day, 365 days a year &mdash; including holidays, at no extra rate.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-white phone" href="tel:+16165550119">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (616) 555-0119
+      </a>
+      <a class="btn btn-clear" href="#book">Request a callback</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="steps">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps, no surprises</h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step reveal">
+        <span class="n">STEP 01</span>
+        <h3>Call or book online</h3>
+        <p>Tell us what's happening. We'll give you a ballpark over the phone and a two-hour arrival window.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">STEP 02</span>
+        <h3>Diagnose &amp; price</h3>
+        <p>A master plumber finds the cause, explains your options, and hands you a flat price. You approve before any work starts.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">STEP 03</span>
+        <h3>Fix it &amp; clean up</h3>
+        <p>Most repairs are done the same visit. We test everything, haul away the old parts, and leave the area cleaner than we found it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICE AREAS ==================== -->
+<section class="areas" id="areas">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">Where we work</p>
+      <h2>Service areas</h2>
+      <p class="section-sub">
+        Based on Division Ave South, covering Grand Rapids and most of Kent County.
+        Response times below are typical, not guaranteed &mdash; weather and traffic have opinions.
+      </p>
+    </div>
+
+    <div class="areas-grid">
+
+      <div class="area-card reveal">
+        <div class="area-head">
+          <h3>Grand Rapids Core</h3>
+          <span class="zone zone-1">30&ndash;45 min</span>
+        </div>
+        <ul class="chips">
+          <li>Eastown</li>
+          <li>Heritage Hill</li>
+          <li>East Hills</li>
+          <li>Creston</li>
+          <li>West Grand</li>
+          <li>Alger Heights</li>
+          <li>Midtown</li>
+          <li>Downtown</li>
+          <li>Beltline</li>
+        </ul>
+      </div>
+
+      <div class="area-card reveal">
+        <div class="area-head">
+          <h3>Kent County</h3>
+          <span class="zone zone-2">45&ndash;75 min</span>
+        </div>
+        <ul class="chips">
+          <li>Wyoming</li>
+          <li>Kentwood</li>
+          <li>Grandville</li>
+          <li>Walker</li>
+          <li>Cascade</li>
+          <li>Ada</li>
+          <li>Rockford</li>
+          <li>Lowell</li>
+          <li>Caledonia</li>
+          <li>Sparta</li>
+        </ul>
+      </div>
+
+      <div class="area-card reveal">
+        <div class="area-head">
+          <h3>Extended Zone</h3>
+          <span class="zone zone-3">By appointment</span>
+        </div>
+        <ul class="chips">
+          <li>Holland</li>
+          <li>Zeeland</li>
+          <li>Hudsonville</li>
+          <li>Jenison</li>
+          <li>Allendale</li>
+          <li>Cedar Springs</li>
+          <li>Greenville</li>
+          <li>Muskegon</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="area-note reveal">
+      <span>Don't see your town? We still travel for larger jobs and repipes &mdash; call and ask.</span>
+      <a href="tel:+16165550119">(616) 555-0119</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+
+    <div class="reviews-head reveal">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow">Customer reviews</p>
+        <h2>What neighbors say</h2>
+      </div>
+      <p class="section-sub" style="max-width:320px">
+        4.9 average across 612 Google reviews and 180 Angi reviews.
+      </p>
+    </div>
+
+    <div class="slider reveal" id="slider">
+
+      <div class="stage" id="stage" aria-live="polite">
+
+        <div class="tslide active">
+          <div class="quote-card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              &ldquo;Pipe let go under the kitchen sink at 11 p.m. on a Sunday. A real person
+              answered, and Dave was in my driveway in about 40 minutes. He gave me a
+              price before he started, and it was exactly what I paid.&rdquo;
+            </blockquote>
+            <div class="who">
+              <div class="avatar">DR</div>
+              <div>
+                <strong>Danielle R.</strong>
+                <span>Eastown, Grand Rapids</span>
+              </div>
+              <span class="platform">Google review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide">
+          <div class="quote-card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              &ldquo;Water heater died on a Friday morning. They had a new one in by 2 p.m.,
+              hauled the old one out, and cleaned up the basement better than I left it.
+              Even pulled the permit for me.&rdquo;
+            </blockquote>
+            <div class="who">
+              <div class="avatar">MW</div>
+              <div>
+                <strong>Marcus &amp; Tia W.</strong>
+                <span>Wyoming, MI</span>
+              </div>
+              <span class="platform">Google review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide">
+          <div class="quote-card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              &ldquo;Another company quoted me a full sewer replacement. Copperline ran a
+              camera, showed me the footage, and said it was one root intrusion in a
+              mostly healthy line. Cleared it for a fraction of the price. That's honesty.&rdquo;
+            </blockquote>
+            <div class="who">
+              <div class="avatar">PS</div>
+              <div>
+                <strong>Priya S.</strong>
+                <span>Heritage Hill, Grand Rapids</span>
+              </div>
+              <span class="platform">Angi review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide">
+          <div class="quote-card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              &ldquo;Slow kitchen drain for a month. They jetted the line, showed me the
+              camera footage of what came out, and didn't try to sell me anything else.
+              Two months later, still draining perfectly.&rdquo;
+            </blockquote>
+            <div class="who">
+              <div class="avatar">GH</div>
+              <div>
+                <strong>Greg H.</strong>
+                <span>Rockford, MI</span>
+              </div>
+              <span class="platform">Google review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide">
+          <div class="quote-card">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>
+              &ldquo;Pipes froze during that January cold snap and I had no idea where the
+              shutoff was. They walked me through it on the phone, then sent someone out
+              the same afternoon. No overtime charge on a holiday weekend.&rdquo;
+            </blockquote>
+            <div class="who">
+              <div class="avatar">AN</div>
+              <div>
+                <strong>Alyssa N.</strong>
+                <span>Grandville, MI</span>
+              </div>
+              <span class="platform">Google review</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-controls">
+        <button class="arrow" id="prevBtn" type="button" aria-label="Previous review">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="arrow" id="nextBtn" type="button" aria-label="Next review">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <div class="dots" id="dots" role="group" aria-label="Choose review"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BOOKING ==================== -->
+<section class="book" id="book">
+  <div class="container book-grid">
+
+    <div class="book-aside reveal">
+      <p class="eyebrow">Schedule service</p>
+      <h2>Book a plumber</h2>
+      <p>
+        Non-emergency jobs can be booked right here. Send the form and we'll confirm
+        your arrival window by text within one business hour &mdash; or call if it
+        can't wait, we're happy to talk it through.
+      </p>
+
+      <div class="call-card">
+        <small>Emergency line &middot; 24/7</small>
+        <a href="tel:+16165550119">(616) 555-0119</a>
+        <p>Live answering, holidays included. No overtime rate.</p>
+      </div>
+
+      <ul class="hours-list">
+        <li><strong>Monday &ndash; Friday</strong> <span>7:00am &ndash; 6:00pm</span></li>
+        <li><strong>Saturday</strong> <span>8:00am &ndash; 2:00pm</span></li>
+        <li><strong>Sunday</strong> <span>Emergency calls only</span></li>
+        <li><strong>Emergency service</strong> <span class="open">24/7 &middot; 365</span></li>
+      </ul>
+
+      <p style="font-size:.88rem;color:var(--muted);margin:0">
+        1420 Division Ave S, Grand Rapids, MI 49507<br>
+        MI Master Plumber #PL-21884
+      </p>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="bookForm" novalidate>
+        <h3>Service request</h3>
+        <p class="form-note">Fields marked <span class="req">*</span> are required.</p>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="name">Your Name <span class="req">*</span></label>
+            <input id="name" name="name" type="text" required autocomplete="name" placeholder="Jamie Halvorsen">
+            <small class="err">Please enter your name.</small>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(616) 555-0144">
+            <small class="err">Please enter a 10-digit phone number.</small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+            <small class="err">That email doesn't look right.</small>
+          </div>
+
+          <div class="field">
+            <label for="zip">Service ZIP Code <span class="req">*</span></label>
+            <input id="zip" name="zip" type="text" inputmode="numeric" required autocomplete="postal-code" placeholder="49507">
+            <small class="err">Please enter a 5-digit ZIP code.</small>
+          </div>
+
+          <div class="field">
+            <label for="service">What do you need? <span class="req">*</span></label>
+            <select id="service" name="service" required>
+              <option value="">Select a service&hellip;</option>
+              <option>Leak or burst pipe</option>
+              <option>Clogged drain or sewer</option>
+              <option>Water heater</option>
+              <option>Toilet / faucet / fixture</option>
+              <option>Leak detection or repipe</option>
+              <option>Sump pump</option>
+              <option>Gas or water line</option>
+              <option>Something else</option>
+            </select>
+            <small class="err">Please choose a service.</small>
+          </div>
+
+          <div class="field">
+            <label for="urgency">How soon?</label>
+            <select id="urgency" name="urgency">
+              <option>Emergency &mdash; right now</option>
+              <option selected>Today if possible</option>
+              <option>This week</option>
+              <option>Next week or later</option>
+              <option>Just getting a quote</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="details">Describe the problem</label>
+            <textarea id="details" name="details" placeholder="Where it's happening, how long it's been going on, and anything you've already tried."></textarea>
+          </div>
+
+          <div class="field full">
+            <label class="check">
+              <input type="checkbox" id="consent" name="consent" required>
+              <span>Text or call me at the number above about this request.</span>
+            </label>
+            <small class="err">We need permission to contact you.</small>
+          </div>
+
+          <div class="field full">
+            <button type="submit" class="btn btn-primary btn-block">Request Service</button>
+          </div>
+
+        </div>
+      </form>
+
+      <div class="form-success" id="bookSuccess" role="status" aria-live="polite">
+        <div class="tick">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+        </div>
+        <h3>Request sent</h3>
+        <p>We'll text you an arrival window within one business hour. If it's urgent, call <a href="tel:+16165550119">(616) 555-0119</a>.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6 6.4 6 10.6a6 6 0 0 1-12 0C6 8.9 12 2.5 12 2.5z"/></svg>
+          </span>
+          <span class="logo-text">Copperline<small>Plumbing Co.</small></span>
+        </a>
+        <p>
+          Family-owned plumbing company serving Grand Rapids and Kent County since 2011.
+          Licensed master plumbers, flat-rate pricing, and a live human on the phone at 2 a.m.
+        </p>
+        <div class="license-box">
+          MI Master Plumber #PL-21884<br>
+          Fully insured &middot; Workers' comp on file
+        </div>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Emergency Repairs</a></li>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heaters</a></li>
+          <li><a href="#services">Leak Detection</a></li>
+          <li><a href="#services">Sewer &amp; Camera</a></li>
+          <li><a href="#services">Fixtures</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#book">Book a Plumber</a></li>
+          <li><a href="tel:+16165550119">Emergency Line</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>1420 Division Ave S<br>Grand Rapids, MI 49507</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <a href="tel:+16165550119">(616) 555-0119</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            <a href="mailto:service@copperlineplumbing.com">service@copperlineplumbing.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Copperline Plumbing Co. All rights reserved.</span>
+      <span><a href="#top">Back to top &uarr;</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Mobile nav ---------- */
+  var menuToggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('nav');
+
+  menuToggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    menuToggle.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---------- Header shadow ---------- */
+  var header = document.getElementById('header');
+  var onScroll = function () {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---------- Testimonial slider ---------- */
+  var slider = document.getElementById('slider');
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.tslide'));
+  var dotsWrap = document.getElementById('dots');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var index = 0;
+  var timer = null;
+  var DELAY = 7000;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var dots = slides.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'dot-btn';
+    b.setAttribute('aria-label', 'Go to review ' + (i + 1));
+    b.addEventListener('click', function () { go(i, true); });
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function go(i, fromUser) {
+    index = (i + slides.length) % slides.length;
+    slides.forEach(function (s, n) { s.classList.toggle('active', n === index); });
+    dots.forEach(function (d, n) {
+      d.classList.toggle('active', n === index);
+      d.setAttribute('aria-current', n === index ? 'true' : 'false');
+    });
+    if (fromUser) restart();
+  }
+
+  function restart() {
+    if (reduceMotion) return;
+    clearInterval(timer);
+    timer = setInterval(function () { go(index + 1); }, DELAY);
+  }
+
+  prevBtn.addEventListener('click', function () { go(index - 1, true); });
+  nextBtn.addEventListener('click', function () { go(index + 1, true); });
+
+  slider.addEventListener('mouseenter', function () { clearInterval(timer); });
+  slider.addEventListener('mouseleave', restart);
+  slider.addEventListener('focusin', function () { clearInterval(timer); });
+  slider.addEventListener('focusout', restart);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) { clearInterval(timer); } else { restart(); }
+  });
+
+  go(0, false);
+  restart();
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- Booking form ---------- */
+  var form = document.getElementById('bookForm');
+  var success = document.getElementById('bookSuccess');
+
+  function fieldOf(el) { return el.closest('.field'); }
+
+  function isValid(el) {
+    if (el.type === 'checkbox') return el.checked;
+    var v = el.value.trim();
+    if (!v) return false;
+    if (el.type === 'tel') return v.replace(/\D/g, '').length >= 10;
+    if (el.id === 'zip') return /^\d{5}$/.test(v);
+    return true;
+  }
+
+  form.querySelectorAll('[required]').forEach(function (el) {
+    var recheck = function () {
+      if (isValid(el)) fieldOf(el).classList.remove('invalid');
+    };
+    el.addEventListener('input', recheck);
+    el.addEventListener('change', recheck);
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var ok = true;
+    var firstBad = null;
+
+    form.querySelectorAll('[required]').forEach(function (el) {
+      var valid = isValid(el);
+      fieldOf(el).classList.toggle('invalid', !valid);
+      if (!valid) {
+        ok = false;
+        if (!firstBad) firstBad = el;
+      }
+    });
+
+    if (!ok) {
+      if (firstBad) firstBad.focus();
+      return;
+    }
+
+    /* ---- DEMO SUBMIT ----
+       Replace with a real endpoint, e.g. Formspree:
+       fetch('https://formspree.io/f/YOUR_ID', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+         body: JSON.stringify(Object.fromEntries(new FormData(form)))
+       }).then(function () { showSuccess(); });
+    */
+    showSuccess();
+  });
+
+  function showSuccess() {
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    form.reset();
+  }
+
+  /* ---------- Year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
